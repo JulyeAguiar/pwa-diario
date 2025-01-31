@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWA-Camera</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="./images/happy_256_ios.png" />
+  <link rel="icon" href="./images/chorao_256.png">
+  <meta name="theme-color" content="white" />
+</head>
+
+<body>
+  <section class="container">
+    <header>
+      <h1>Diário de Descobertas</h1>
+    </header>
+
+    <div class="conteudo">
+      <h2>Sua Localização</h2>
+      <p>Latitude: <span id="latitude">0.0</span></p>
+      <p>Longitude: <span id="longitude">0.0</span></p>
+      <button id="localizacao">Capturar Localização</button>
+      <iframe id="mapa" width="600" height="450" style="border:0;" loading="lazy"></iframe>
+
+      <div>
+        <label for="nomeDescoberta">Nome da Descoberta:</label>
+        <input type="text" id="nomeDescoberta" placeholder="Digite o nome..." required>
+      </div>
+
+      <h2>Câmera</h2>
+      <video id="camera--view" autoplay></video>
+      <canvas id="camera--sensor"></canvas>
+      <img id="camera--output">
+      <button id="camera--trigger">Capturar Foto</button>
+
+      <h2>Últimas Descobertas</h2>
+      <ul id="listaDescobertas"></ul>
+    </div>
+
+
+  </section>
+
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
